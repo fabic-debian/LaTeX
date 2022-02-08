@@ -1,0 +1,53 @@
+%% IMPOSTAZIONI, DEFINIZIONI DI COMANDI E AMBIENTI PERSONALI
+
+\usepackage[T1]{fontenc} % font encoder in italiano
+\usepackage[utf8]{inputenc} % input encoder italiano
+\usepackage[english]{babel} % font encoder inglese
+%\setcounter{secnumdepth}{2} $numero massimo (=profondità) sezioni enumerate
+%\setcounter{tocdepth}{2} $profondità livelli inseriti in indice
+
+\usepackage{indentfirst} % rientro riga primo capoverso di ogni sezione
+\usepackage{microtype} % migliora riempimento righe
+
+% PDF WARNINGS CHEATS
+% Tex warning: PDF inclusion: multiple pdfs with page group included in a 
+%single page
+\pdfsuppresswarningpagegroup=1 
+% TeX warning: pdflatex (file .pdf): PDF inclusion: found PDF version <1.7>, 
+% but at most version <1.5> allowed
+\pdfminorversion=7
+
+%% GREEK LETTERS
+\renewcommand{\epsilon}{\varepsilon}
+%\renewcommand{\theta}{\vartheta}
+%\renewcommand{\rho}{\varrho}
+%\renewcommand{\phi}{\varphi}
+
+%% MATEMATICA, TABELLE, FIGURE, PARENTESI, UNITÀ DI MISURA 
+\usepackage{amsmath,amssymb} % formule matematiche
+\usepackage{booktabs,caption} % ambienti tabular per testo, array per formule
+\usepackage{graphicx} % figure \includegraphics
+\usepackage{braket} % parentesi \Bra, \Ket e \Braket
+\usepackage{siunitx} % unità di misura \SI \si \ang
+\usepackage{subfig} % multiple tables/figures with caption
+% Per usare la virgola come separatore in siunitx aggiungere 
+% [output-decimal-marker={,}] prim di { 
+\newcommand{\vect}[1]{\boldsymbol{#1}} % simbolo di vettore in grassetto
+\usepackage{mathtools} % valore assoluto e norma
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert} % valore assoluto
+\DeclarePairedDelimiter{\norma}{\lVert}{\rVert} % norma
+\usepackage{textcomp} % allows CTRL+F to search symbols like °. 
+
+%% CHEMISTRY
+\usepackage{chemformula} %\ch  e.g. \ch{H2O} H_2O
+
+%% URL, MAIL, OMISSIS, REFERENCES, COMMENTS
+\usepackage{url} % \url
+\newcommand{\mail}[1]{\href{mailto:#1}{\texttt{#1}}} % \mail
+\newcommand{\omissis}{[\textellipsis\unkern]} % \omissis
+\usepackage[colorlinks]{hyperref} % \href
+\usepackage{comment} % \begin{comment} end{comment}
+\usepackage{fancyhdr}
+\lhead{\emp{ok}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
